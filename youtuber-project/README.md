@@ -67,11 +67,13 @@ app.use("/", userRouter)에서는 / 경로로 들어오는 모든 요청에 대�
 
 ## 2. ERD 그리기
 
-![drawSQL-image-export-2024-05-12.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/5811e748-81d5-4623-ada1-6e4f6a869930/drawSQL-image-export-2024-05-12.png)
+
 
 어느정도 코드가 고도화되었으니, users, channels의 ERD와 이들의 관계를 확인해보자.
 
 ### 2.1 기존 API 설계
+![drawSQL-image-export-2024-05-12](https://github.com/oo00oo0oo/backend-basic/assets/150869327/b3215263-4b2b-464c-a4dd-5574b1642532)
+
 
 - `채널 생성 POST channels`
     - req: body (channelTitle)
