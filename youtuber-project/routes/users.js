@@ -1,8 +1,7 @@
 const express = require('express');
-const app = express();
+const router = express.Router(); // user-demo를 ezpress의 router로 사용가능
 
-app.listen(7777);
-app.use(express.json());
+router.use(express.json());
 
 
 const db = new Map();
@@ -10,57 +9,55 @@ let num = 1;
 
 // (추가) app.route 사용해보기
 // .get과 .delete가 path가 동일하니까, route로 동일하게 합쳐서 사용 가능
-app
-    .route('/users/:id')
+router
+    .route('/users')
     .get((req,res)=>{
-        let {id} = req.params
-        id = parseInt(id)
+        let {userId} = req.body
     
-        const user = db.get(id)
+        const user = db.get(userId)
         if (user){
             res.status(200).send({
-                id: user.id,
+                userId: user.userId,
                 name: user.name
             })
         } else {
             res.status(400).send({
-                message: '없는 아이디 정보입니다.'
+                message: '회원 정보가 없습니다.'
             })
         }
     })
     .delete((req,res)=>{
-        let {id} = req.params
-        id = parseInt(id)
+        let {userId} = req.body
     
-        const user = db.get(id)
+        const user = db.get(userId)
         if (user){
             let name = user.name
-            db.delete(id)
+            db.delete(userId)
             res.json({
                 message: `${name}님, 다음에 또 뵙겠습니다.`
             })
         } else {
             res.status(404).send({
-                message: `없는 정보입니다.`
+                message: `회원 정보가 없습니다.`
             })
         }
     })
 
 // 회원가입
-app.post('/join', (req,res)=>{
-    let user = req.body
+router.post('/join', (req,res)=>{
 
-    if (user.id && user.pw && user.name){
-        db.set(num++, user)
-        console.log(db)
-
-        res.status(201).send({
-            message: `${db.get(num-1).name}님 회원가입을 환영합니다`
-        })
-    } else {
+    if (req.body == {}){
         res.status(400).send({
             message: '다시 입력해주세요'
         })  
+        
+    } else {
+        const userId = req.body.userId
+        db.set(userId, req.body)
+
+        res.status(201).send({
+            message: `${db.get(userId).name}님 회원가입을 환영합니다`
+        })
     }
 })
 
@@ -102,7 +99,7 @@ console.log(db)
 
 // 로그인
 // 아이디, 패스워드 각각 검사하는 코드
-app.post('/login', (req,res)=>{
+router.post('/login', (req,res)=>{
     const {userId, pw} = req.body
     var loginUser = {}
 
@@ -123,15 +120,20 @@ app.post('/login', (req,res)=>{
 
     // id 못 찾았다면
     if(isExist(loginUser)){
-        console.log('같은 거 찾음')
 
         if (loginUser.pw = pw){
-            console.log("패스워도도 같다")
+            res.status(200).json({
+                message: `${loginUser.name}님 로그인되었습니다.`
+            })
         } else {
-            console.log('패스워드는 틀렸다')
+            res.status(400).json({
+                message: "비밀번호가 틀렸습니다."
+            })
         }
     } else {
-        console.log('입력하신 아이디는 없는 아이디입니다.')
+        res.status(404).json({
+            message: "회원정보가 없습니다."
+        })
     }
 })
 
@@ -179,3 +181,4 @@ app.post('/login', (req,res)=>{
 // console.log(db)
 
 
+module.exports = router
