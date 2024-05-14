@@ -2,7 +2,7 @@
 
 ### 1.1 워크 벤치 시작
 
-![Screenshot 2024-05-13 at 5.27.59 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/b36859b2-e82c-4c55-b5c7-077683e64a42/Screenshot_2024-05-13_at_5.27.59_AM.png)
+![workbench1](./img/workbench1)
 
 connection name: test로 일단 세팅
 
