@@ -2,7 +2,7 @@
 
 ### 1.1 워크 벤치 시작
 
-![workbench1](./img/workbench1)
+1[workbench](/img/workbench1.png)
 
 connection name: test로 일단 세팅
 
@@ -12,7 +12,7 @@ Hostname: 127.0.0.1 or localhhost
 
 ### 1.2 워크 벤치 구조
 
-![Screenshot 2024-05-13 at 5.42.04 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/7ada45b6-6e0d-4da1-9f86-7623530bb19a/Screenshot_2024-05-13_at_5.42.04_AM.png)
+1[workbench](/img/workbench2.png)
 
 1. 가운데 상단에 쿼리 작성
 2. 가운데 중간에 쿼리 결과값
@@ -24,11 +24,11 @@ Hostname: 127.0.0.1 or localhhost
 
 스키마에서 오른쪽 마우스 클릭하고 create schemas
 
-![Screenshot 2024-05-13 at 5.49.59 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/978c378e-9a5b-4c96-9258-878f91ca56af/Screenshot_2024-05-13_at_5.49.59_AM.png)
+1[workbench](/img/workbench3.png)
 
 스키마 이름 정하고 apply 클릭
 
-![Screenshot 2024-05-13 at 5.50.05 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/f04b6e7f-c692-445d-a7b5-b85d86510512/Screenshot_2024-05-13_at_5.50.05_AM.png)
+1[workbench](/img/workbench4.png)
 
 쿼리문 확인 후 apply 하면 생성 완료
 
@@ -68,7 +68,7 @@ Hostname: 127.0.0.1 or localhhost
 
 선택하면 다음과 같은 창이 나옴
 
-![Screenshot 2024-05-14 at 3.41.14 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/f352aa75-4958-4672-8d27-400b52cf8dea/Screenshot_2024-05-14_at_3.41.14_PM.png)
+1[workbench](/img/workbench5.png)
 
 상단에 테이블 명 기입
 
@@ -84,19 +84,19 @@ RENAME TABLE `기존 테이블명` TO `새로운 테이블명`
 
 중요한 건 테이블명에 백틱(**`**)을 사용해야 한다는 것이다.
 
-![Screenshot 2024-05-14 at 3.38.56 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/5e351a12-27e1-43ac-8eac-c1cf0da17678/Screenshot_2024-05-14_at_3.38.56_PM.png)
+1[workbench](/img/workbench6.png)
 
 난 users라는 테이블명을 실수로 new_table로 생성해서, 변경해보았다.
 
-![Screenshot 2024-05-14 at 3.39.05 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/90a73792-1df1-4368-abb4-2ac9df0c4a6e/Screenshot_2024-05-14_at_3.39.05_PM.png)
+1[workbench](/img/workbench7.png)
 
-![Screenshot 2024-05-14 at 3.39.01 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/fbe03cea-a4e2-4d0a-bc9c-26d6f5bdeed6/Screenshot_2024-05-14_at_3.39.01_PM.png)
+1[workbench](/img/workbench8.png)
 
 ### 2.3 데이터 타입
 
 id라는 컬럼을 생성하면, 자동으로 PK라는 걸 인식하고 조건을 정해준다. 
 
-![Screenshot 2024-05-14 at 3.42.28 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/1cd7877a-58f6-44c9-8ac5-94e8b802b791/Screenshot_2024-05-14_at_3.42.28_PM.png)
+1[workbench](/img/workbench9.png)
 
 자주 쓰이는 데이터 타입은 INT, BIGINT, VARCHAR, CHAR, DATETIME, DOUBLE 등이 있다.
 
@@ -271,11 +271,11 @@ connection.query(
 > created_at 추가
 > 
 
-![Screenshot 2024-05-14 at 4.46.27 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/994f1771-265b-4037-9882-e68a7bf3e444/Screenshot_2024-05-14_at_4.46.27_PM.png)
+1[workbench](/img/workbench10.png)
 
 users의 두번째 버튼 클릭 후 created_at 컬럼 추가하기
 
-![Screenshot 2024-05-14 at 4.45.35 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/6819005e-80c9-4113-b506-a185fbbb674d/Screenshot_2024-05-14_at_4.45.35_PM.png)
+1[workbench](/img/workbench11.png)
 
 데이터타입은 TIMESTAMP
 
@@ -286,7 +286,7 @@ users의 두번째 버튼 클릭 후 created_at 컬럼 추가하기
 
 기본 시스템의 시간대는 UTC로 한국의 시간대와는 다름
 
-![Screenshot 2024-05-14 at 4.48.52 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/e67b413d-4bb2-4526-b1a4-a2aec7218637/300c2cf0-36e6-48ca-9f70-42c2793f9f0f/Screenshot_2024-05-14_at_4.48.52_PM.png)
+1[workbench](/img/workbench12.png)
 
 시간대를 한국으로 변경하기 위해서 
 
