@@ -2,7 +2,7 @@
 
 ### 1.1 워크 벤치 시작
 
-1[workbench](/img/workbench1.png)
+![workbench](/img/workbench1.png)
 
 connection name: test로 일단 세팅
 
@@ -12,7 +12,7 @@ Hostname: 127.0.0.1 or localhhost
 
 ### 1.2 워크 벤치 구조
 
-1[workbench](/img/workbench2.png)
+![workbench](/img/workbench2.png)
 
 1. 가운데 상단에 쿼리 작성
 2. 가운데 중간에 쿼리 결과값
@@ -24,11 +24,11 @@ Hostname: 127.0.0.1 or localhhost
 
 스키마에서 오른쪽 마우스 클릭하고 create schemas
 
-1[workbench](/img/workbench3.png)
+![workbench](/img/workbench3.png)
 
 스키마 이름 정하고 apply 클릭
 
-1[workbench](/img/workbench4.png)
+![workbench](/img/workbench4.png)
 
 쿼리문 확인 후 apply 하면 생성 완료
 
@@ -68,7 +68,7 @@ Hostname: 127.0.0.1 or localhhost
 
 선택하면 다음과 같은 창이 나옴
 
-1[workbench](/img/workbench5.png)
+![workbench](/img/workbench5.png)
 
 상단에 테이블 명 기입
 
@@ -84,19 +84,19 @@ RENAME TABLE `기존 테이블명` TO `새로운 테이블명`
 
 중요한 건 테이블명에 백틱(**`**)을 사용해야 한다는 것이다.
 
-1[workbench](/img/workbench6.png)
+![workbench](/img/workbench6.png)
 
 난 users라는 테이블명을 실수로 new_table로 생성해서, 변경해보았다.
 
-1[workbench](/img/workbench7.png)
+![workbench](/img/workbench7.png)
 
-1[workbench](/img/workbench8.png)
+![workbench](/img/workbench8.png)
 
 ### 2.3 데이터 타입
 
 id라는 컬럼을 생성하면, 자동으로 PK라는 걸 인식하고 조건을 정해준다. 
 
-1[workbench](/img/workbench9.png)
+![workbench](/img/workbench9.png)
 
 자주 쓰이는 데이터 타입은 INT, BIGINT, VARCHAR, CHAR, DATETIME, DOUBLE 등이 있다.
 
@@ -271,11 +271,11 @@ connection.query(
 > created_at 추가
 > 
 
-1[workbench](/img/workbench10.png)
+![workbench](/img/workbench10.png)
 
 users의 두번째 버튼 클릭 후 created_at 컬럼 추가하기
 
-1[workbench](/img/workbench11.png)
+![workbench](/img/workbench11.png)
 
 데이터타입은 TIMESTAMP
 
@@ -286,7 +286,7 @@ users의 두번째 버튼 클릭 후 created_at 컬럼 추가하기
 
 기본 시스템의 시간대는 UTC로 한국의 시간대와는 다름
 
-1[workbench](/img/workbench12.png)
+![workbench](/img/workbench12.png)
 
 시간대를 한국으로 변경하기 위해서 
 
