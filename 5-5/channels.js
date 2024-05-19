@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const conn = require('../workbench/mariadb')
+const conn = require('./mariadb')
 
 router.use(express.json());
 
