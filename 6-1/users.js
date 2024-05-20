@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router(); 
 const conn = require('./mariadb')
+const {body, validationResult} = require('express-validator')
+
 
 router.use(express.json());
 
@@ -33,7 +35,9 @@ router
 
 
 // 회원가입
-router.post('/join', (req,res)=>{
+router
+    .route('/join')
+    .post((req,res)=>{
     if (req.body == {}){
         res.status(400).send({
             message: '다시 입력해주세요'
@@ -51,7 +55,9 @@ router.post('/join', (req,res)=>{
  
 
 // 로그인
-router.post('/login', (req,res)=>{
+router
+    .route('/login')
+    .post((req,res)=>{
     const {email, password} = req.body
     let sql = "SELECT * FROM users WHERE email = ?"
 
